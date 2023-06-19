@@ -274,8 +274,8 @@ html {
 }
 
 .row{
-    font-size: 15px;
-    padding: 90px;
+    font-size: 25px;
+    padding: 70px;
     letter-spacing: 0.5px;
 }
 
@@ -449,52 +449,6 @@ h3{
     font-style: italic;
 }
 
-
-@keyframes html-fill{
-    100%{
-        width: 80%
-    }
-}
-
-#css-bar{
-    animation: css-fill 2s forwards;
-}
-
-@keyframes css-fill{
-    100%{
-        width: 80%
-    }
-}
-
-#js-bar{
-    animation: js-fill 2s forwards;
-}
-
-@keyframes js-fill{
-    100%{
-        width: 60%
-    }
-}
-
-#sass-bar{
-    animation: sass-fill 2s forwards;
-}
-
-@keyframes sass-fill{
-    100%{
-        width: 50%
-    }
-}
-
-#git-bar{
-    animation: git-fill 2s forwards;
-}
-
-@keyframes git-fill{
-    100%{
-        width: 50%
-    }
-}
 
 /*Modals*/
 
