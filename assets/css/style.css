@@ -261,7 +261,7 @@ tr:nth-child(even) {
 .section-heading span {
   margin-top: 15px;
   font-size: 22px;
-  padding: 90px;
+  /* padding: 90px; */
   letter-spacing: 0.5px;
   text-align: justify;
   text-justify: inter-word;
