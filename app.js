@@ -26,32 +26,32 @@ scrollLinks.forEach(function (link) {
 
 // QUOTES CAROUSEL
 
-let slideIndex = 1;
-showSlides(slideIndex);
+// let slideIndex = 1;
+// showSlides(slideIndex);
 
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
+// function plusSlides(n) {
+//   showSlides((slideIndex += n));
+// }
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
+// function currentSlide(n) {
+//   showSlides((slideIndex = n));
+// }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("quote");
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
+// function showSlides(n) {
+//   let i;
+//   let slides = document.getElementsByClassName("quote");
+//   if (n > slides.length) {
+//     slideIndex = 1;
+//   }
+//   if (n < 1) {
+//     slideIndex = slides.length;
+//   }
+//   for (i = 0; i < slides.length; i++) {
+//     slides[i].style.display = "none";
+//   }
 
-  slides[slideIndex - 1].style.display = "block";
-}
+//   slides[slideIndex - 1].style.display = "block";
+// }
 
 // MENU TOGGLE
 
@@ -62,3 +62,22 @@ toggle.onclick = function () {
   var hidden = menu.style.visibility === "hidden";
   menu.style.visibility = hidden ? "visible" : "hidden";
 };
+
+// quotes generator
+
+let quote = document.querySelector(".italics");
+let author = document.querySelector(".author");
+
+const quotesURL = "https://api.quotable.io/random";
+
+let getQuote = () => {
+  fetch(quotesURL)
+    .then((res) => res.json())
+    .then((data) => {
+      console.log(data);
+      quote.innerText = data.content;
+      author.innerText = data.author;
+    });
+};
+
+window.addEventListener("load", getQuote);
